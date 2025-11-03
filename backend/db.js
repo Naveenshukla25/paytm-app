@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/paytm");
+mongoose.connect("process.env.MONGO_URI");
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -28,3 +28,4 @@ module.exports = {
   User,
   Account,
 };
+
